@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .collapse.show {
+            height: 100% !important;
+        }
+    </style>
+    <title>Login | Register</title>
+</head>
+
+<body>
+    {% include 'navbar.html' %}
+    <div class="container mt-5">
+        <h2 class="fw-semibold text-center text-black">Login or Register</h2>
+    </div>
+    <div class="container mt-5">
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-5 m-2 p-4 border text-light bg-primary overflow-hidden">
+                {% if regError: %}
+                <div class="collapse" id='collapse-1'>
+                    {% else: %}
+                    <div class="collapse show" id='collapse-1'>
+                        {% endif %}
+                        <h3 class="fw-semibold text-center text-black">Login</h3>
+                        <hr>
+                        <form action="/login" method="post">
+                            <div class="mb-3">
+                                <label for="username" class="form-label text-black">Username</label>
+                                <input type="text" class="form-control" id='username' name="username">
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label text-black">Password</label>
+                                <input type="password" id='password' class="form-control" name="password">
+                            </div>
+                            {% if loginError: %}
+                            <div class="mb-3">
+                                <p class="text-danger">Error: {{ loginError }}</p>
+                            </div>
+                            {% endif %}
+                            <div class="mb-3 d-flex justify-content-end">
+                                <button type='submit' class="btn btn-primary">Login</button>
+                            </div>
+                        </form>
+                    </div>
+                    {% if regError: %}
+                    <div class="collapse show" id='collapse-1' style="height: 100%;">
+                        {% else: %}
+                        <div class="collapse" id='collapse-1' style="height: 100%;">
+                            {% endif %}
+                            <div class="d-flex align-items-center justify-content-center h-100">
+                                <p class="fs-5 text-black">
+                                    Already have an account ? <button class="btn btn-primary" data-bs-toggle="collapse"
+                                        href="#collapse-1" role="button" aria-expanded="false"
+                                        aria-controls="collapse-1">Login</button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-5 m-2 p-4 border bg-secondary text-light overflow-hidden">
+                        {% if regError: %}
+                        <div class="collapse show" id='collapse-1'>
+                            {% else: %}
+                            <div class="collapse " id='collapse-1'>
+                                {% endif %}
+                                <h3 class="fw-semibold text-center text-black">Register</h3>
+                                <hr>
+                                <form action="/register" method="post">
+                                    <div class="mb-3">
+                                        <label for="name" class="form-label text-black">Username</label>
+                                        <input type="text" class="form-control" name="name" id="name">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="email2" class="form-label text-black">Email</label>
+                                        <input type="email" class="form-control" name="email" id="email2">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="newPass" class="form-label text-black">Create new password</label>
+                                        <input type="password" class="form-control" name="newPass" id="newPass">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="confPass" class="form-label text-black">Confirm password</label>
+                                        <input type="password" class="form-control" name="confPass" id="confPass">
+                                    </div>
+                                    {% if regError: %}
+                                    <div class="mb-3">
+                                        <p class="text-danger">Error: {{ regError }}</p>
+                                    </div>
+                                    {% endif %}
+                                    <div class="mb-3 d-flex justify-content-end">
+                                        <button class="btn btn-warning">Register</button>
+                                    </div>
+                                </form>
+                            </div>
+
+                            {% if regError: %}
+                            <div class="collapse" id='collapse-1' style="height: 100%;">
+                                {% else: %}
+                                <div class="collapse show" id='collapse-1' style="height: 100%;">
+                                    {% endif %}
+                                    <div class="d-flex align-items-center justify-content-center h-100">
+                                        <p class="fs-5 text-black">
+                                            Don't have an account ?
+                                            <button class="btn btn-warning" data-bs-toggle="collapse" href="#collapse-1"
+                                                role="button" aria-expanded="false"
+                                                aria-controls="collapse-1">Register</button>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+</body>
+
+</html>

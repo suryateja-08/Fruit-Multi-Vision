@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FruitMultiVision</title>
+  <style>
+    /* Add hover effect for feature cards */
+    .feature-card {
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: scale(1.05);
+      /* Slightly enlarge the card */
+      background-color: #FFB347;
+      /* Change to a lighter shade */
+    }
+
+    /* Optional: Add shadow effect on hover */
+    .feature-card:hover {
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+
+</head>
+
+<body>
+  {% include 'navbar.html '%}
+
+  <div class="container-fluid">
+    <img src="../static/images/bg/fw.jpg" alt="colon cancer" class="img-fluid" style="width: 100%;">
+    <div class="position-absolute top-50 start-50 translate-middle text-center">
+      <h1>FruitMultiVision</h1>
+      <p>Bringing the World's Hidden Fruits to Your Table <br> From Hidden Orchards to Your Plate, Discover Exotic
+        Flavors.</p>
+      <a href="{{url_for('login')}}" class="btn btn-primary mt-3">Explore Now</a>
+    </div>
+  </div>
+
+  <div class="container-fluid p-4 bg-brown">
+    <h3 class="text-center fw-semibold text-white">Discover Global Fruits</h3>
+    <hr>
+    <div class="row d-flex align-items-center flex-wrap">
+      <!-- Left Image -->
+      <div class="col-md-6 text-center">
+        <img src="../static/images/bg/b1.avif" alt="fruit basket" class="img-fluid rounded">
+      </div>
+      <!-- Right Text -->
+      <div class="col-md-6">
+        <p class="fs-5 text-white">
+          FruitMultiVision is an innovative web app designed to identify and classify lesser-known fruits from
+          various countries, tailored specifically for Indian clients. By harnessing the power of deep
+          learning technology, we aim to uncover unique fruit varieties that are often overlooked, fostering a
+          greater appreciation for global biodiversity. This app serves as a valuable resource for fruit
+          enthusiasts, chefs, and nutritionists alike, offering insights into the flavors, uses, and benefits
+          of these rare fruits.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid p-3">
+    <h3 class="fw-semibold text-dark text-center">Key Features</h3>
+    <hr>
+    <div class="row text-center">
+      <!-- Feature 1 -->
+      <div class="col-md-4 d-flex flex-column align-items-center">
+        <div class="p-3 rounded feature-card" style="background-color: #FFC95F;">
+          <img src="../static/images/bg/k1.jpg" alt="AI-Powered Classification" class="img-fluid rounded mb-3"
+            style="height: 150px; object-fit: cover;">
+          <p class="fs-5">
+            <b>AI-Powered Classification</b>
+            <hr>
+            Utilizes advanced deep learning models to accurately identify and categorize over 40 varieties of
+            lesser-known fruits from around the world.
+          </p>
+        </div>
+      </div>
+      <!-- Feature 2 -->
+      <div class="col-md-4 d-flex flex-column align-items-center">
+        <div class="p-3 rounded feature-card" style="background-color: #FFC95F;">
+          <img src="../static/images/bg/k2.webp" alt="Cultural Insights" class="img-fluid rounded mb-3"
+            style="height: 150px; object-fit: cover;">
+          <p class="fs-5">
+            <b>Cultural Insights</b>
+            <hr>
+            Provides information about the origins, uses, and nutritional benefits of each fruit, enhancing users'
+            understanding and appreciation of global fruit diversity.
+          </p>
+        </div>
+      </div>
+      <!-- Feature 3 -->
+      <div class="col-md-4 d-flex flex-column align-items-center">
+        <div class="p-3 rounded feature-card" style="background-color: #FFC95F;">
+          <img src="../static/images/bg/k3.jpg" alt="User-Friendly Experience" class="img-fluid rounded mb-3"
+            style="height: 150px; object-fit: cover;">
+          <p class="fs-5">
+            <b>User-Friendly Experience</b>
+            <hr>
+            Designed with an intuitive interface that allows users to easily upload images and receive rapid
+            classification results.With seamless navigation and quick processing.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  {% include 'footer.html'%}
+
+</body>
+
+</html>

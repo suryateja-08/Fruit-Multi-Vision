@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep learning models</title>
+</head>
+
+<body>
+    {% include 'navbar.html' %}
+
+    <div class="container p-3 mt-3 bg-primary rounded">
+        <div class="container bg-secondary p-4 ">
+            <h3 class="fw-semibold text-center text-black">Behind the Scenes: Our Powerful Classification Models. </h3>
+            <hr>
+            <p class="fs-custom text-black">
+                At FruitMultiVision, we leverage cutting-edge deep learning algorithms to bring you accurate and
+                efficient
+                identification of lesser-known fruits. Our models have been meticulously trained on diverse datasets to
+                ensure they can recognize over 40 varieties from various countries with over 70% accuracy. This page
+                delves into the advanced technologies that power our fruit classification capabilities.
+            </p>
+        </div>
+    </div>
+
+    <h1 class="text-center fw-semibold mt-5">Algorithms Used for Model Training</h1>
+    <div class="container p-4">
+        <div class="row p-3 border border-black rounded bg-primary ">
+            <div class="col-md-4 d-flex justify-content-center">
+                <img src="../static/images/model/vgg19.png" alt="VGG19 Model" class="img-fluid">
+            </div>
+            <div class="col-md-8 bg-secondary p-3">
+                <h2 class="text-center fw-semibold text-black">VGG19</h2>
+                <hr class="opacity-75">
+                <p class="fs-custom text-black">
+                    VGG19 is a deep convolutional neural network renowned for its simplicity and depth, consisting of
+                    19 layers that enable it to capture intricate features in images. Developed by the Visual Geometry
+                    Group at the University of Oxford, this model is particularly effective at identifying detailed
+                    patterns, which is crucial for distinguishing subtle differences in medical imaging. By stacking
+                    multiple convolutional layers with small filters, VGG19 achieves a high level of accuracy while
+                    maintaining a straightforward structure. This makes it an excellent choice for tasks that require
+                    fine-grained visual recognition, such as identifying cancerous patterns in colon tissue.
+                </p>
+            </div>
+        </div>
+
+        <div class="row p-3 mt-3 border border-black rounded bg-primary ">
+            <div class="col-md-4 d-flex justify-content-center">
+                <img src="../static/images/model/efficientnet.webp" alt="EfficientNet Model" class="img-fluid">
+            </div>
+            <div class="col-md-8 bg-secondary p-3 ">
+                <h2 class="text-center fw-semibold text-black">EfficientNet</h2>
+                <hr class="opacity-75">
+                <p class="fs-custom text-black">
+                    EfficientNet is an innovative model that balances accuracy and computational efficiency through
+                    compound scaling, which optimizes both depth and width based on available resources. Developed by
+                    Google, EfficientNet's architecture allows it to achieve high performance with fewer parameters
+                    compared to traditional models, making it both powerful and efficient. For ColonScan, EfficientNet
+                    provides a high-accuracy solution that minimizes the need for extensive computational power,
+                    enabling faster and more effective analysis. This model's balanced approach makes it a versatile
+                    option for medical imaging tasks that demand both accuracy and scalability.
+                </p>
+            </div>
+        </div>
+
+        <div class="row p-3 mt-3 border border-black rounded bg-primary ">
+            <div class="col-md-4 d-flex justify-content-center">
+                <img src="../static/images/model/densenet.png" alt="MobileNet Model" class="img-thumbnail">
+            </div>
+            <div class="col-md-8 bg-secondary p-3 ">
+                <h2 class="text-center fw-semibold text-black">DenseNet</h2>
+                <hr>
+                <p class="fs-custom text-black">
+                    DenseNet, short for Densely Connected Convolutional Networks, is celebrated for its innovative
+                    architecture that allows for high feature reuse and efficient gradient flow. By connecting each
+                    layer to every subsequent layer, DenseNet enhances the model's ability to learn from previous
+                    layers, resulting in improved accuracy and reduced parameters. This architecture makes it
+                    particularly effective for complex image classification tasks. In our application, DenseNet aids in
+                    the identification of lesser-known fruits by leveraging its ability to capture intricate features,
+                    leading to reliable and consistent classification results.
+                </p>
+            </div>
+        </div>
+    </div>
+    {% include 'footer.html' %}
+
+
+</body>
+
+</html>

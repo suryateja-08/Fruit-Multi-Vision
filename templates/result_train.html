@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Training Result</title>
+</head>
+
+<body>
+    {% include 'navbar.html' %}
+    <div class="container p-4 mt-5">
+        <h1 class="text-center fw-semibold">Result of Deep Learning models</h1>
+    </div>
+
+    <div class="container p-4 bg-primary" style="width: 50%;min-width: 420px;">
+        <table class="table table-striped m-0">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Model</th>
+                    <th scope="col">Training Accuracy</th>
+                    <th scope="col">Test Accuracy</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="col">1</th>
+                    <td>VGG19</td>
+                    <td>68.10%</td>
+                    <td>68.20%</td>
+                </tr>
+                <tr>
+                    <th scope="col">2</th>
+                    <td>DenseNet</td>
+                    <td>35.48%</td>
+                    <td>36.01%</td>
+                </tr>
+                <tr>
+                    <th scope="col">3</th>
+                    <td>EfficientNetV2B0</td>
+                    <td>82.83%</td>
+                    <td>83.91%</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <hr>
+
+    <div class="container p-4">
+        <h2 class="text-center fw-semibold">Visualized graphs</h2>
+    </div>
+
+    <div class="container bg-primary text-white p-4 mt-1">
+        <h2 class="fw-semibold text-center">VGG19</h2>
+        <hr class="opacity-75 border-white">
+        <p class="fs-5">Training Accuracy : 68.10% </p>
+        <p class="fs-5">Test Accuracy : 68.20%</p>
+        <div class="container d-flex align-items-center justify-content-center">
+            <img src="../static/Models/output_vgg.png" alt="" class="img-fluid">
+        </div>
+    </div>
+    <div class="container bg-primary text-white p-4 mt-5">
+        <h2 class="fw-semibold text-center">DenseNet</h2>
+        <hr class="opacity-75 border-white">
+        <p class="fs-5">Training Accuracy : 35.48% </p>
+        <p class="fs-5">Test Accuracy : 36.01%</p>
+        <div class="container d-flex align-items-center justify-content-center">
+            <img src="../static/Models/output_dense.png" alt="" class="img-fluid">
+        </div>
+    </div>
+    <div class="container bg-primary text-white p-4 mt-5">
+        <h2 class="fw-semibold text-center">EfficientNetV2B0</h2>
+        <hr class="opacity-75 border-white">
+        <p class="fs-5">Training Accuracy : 82.83% </p>
+        <p class="fs-5">Test Accuracy : 83.91%</p>
+        <div class="container d-flex align-items-center justify-content-center">
+            <img src="../static/Models/output_eff.png" alt="" class="img-fluid">
+        </div>
+    </div>
+
+  
+
+</body>
+
+</html>
